@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DNA Analyzer</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🧬 DNA & RNA Analyzer</h1>
+    <p class="subtitle">Analyze sequences from nucleotides to proteins</p>
+
+    <div class="card">
+        <label>Enter Sequence</label>
+        <textarea id="sequence" placeholder="Paste DNA or RNA sequence..."></textarea>
+
+        <div class="row">
+            <div>
+                <label>DNA Strand Type</label>
+                <select id="strand">
+                    <option value="coding">Coding Strand</option>
+                    <option value="template">Template Strand</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Upload File</label>
+                <input type="file" id="fileInput">
+            </div>
+        </div>
+
+        <div id="dropZone">📂 Drag & Drop File Here</div>
+
+        <button onclick="analyze()">Analyze Sequence</button>
+    </div>
+
+    <div id="results" class="results-card"></div>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
